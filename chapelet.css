@@ -1,0 +1,36 @@
+body {
+  background-color: midnightblue;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+}
+h1 {
+  color: mistyrose;
+  text-align: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+}
+footer p {
+  text-align: center;
+  font-size: small;
+}
+button {
+  border-radius: 20px 20px;
+  font-size: larger;
+  background-color: mistyrose;
+  color: midnightblue;
+  height: 8rem;
+  width: 16rem;
+  align-self: center;
+}
