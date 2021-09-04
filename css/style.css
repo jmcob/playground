@@ -1,0 +1,13 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: midnightblue;
+}
+body a {
+  color: aliceblue;
+}
+body a:visited {
+  color: aquamarine;
+}
+
+/*# sourceMappingURL=style.css.map */
