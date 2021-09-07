@@ -42,7 +42,11 @@ function afficherHeure() {
 
 afficherHeure();
 
+// fonctions avec paramêtre
 function direBonjour(prenom) {
   console.log("Bonjour " + prenom);
 }
+
 direBonjour("Aurore");
+direBonjour("Jean-Maxime");
+direBonjour("Aurélien");

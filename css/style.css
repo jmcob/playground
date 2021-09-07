@@ -10,4 +10,12 @@ body a:visited {
   color: aquamarine;
 }
 
+.menu {
+  font-size: larger;
+}
+
+h1 {
+  font-size: xx-large;
+}
+
 /*# sourceMappingURL=style.css.map */
