@@ -13,14 +13,14 @@ h1 {
   color: mistyrose;
   text-align: center;
 }
-main {
-  display: flex;
-  flex-direction: column;
-}
+main,
+div,
+p,
 footer {
   display: flex;
   flex-direction: column;
 }
+
 footer p {
   text-align: center;
   font-size: small;

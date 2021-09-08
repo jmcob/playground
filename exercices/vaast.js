@@ -50,3 +50,8 @@ function direBonjour(prenom) {
 direBonjour("Aurore");
 direBonjour("Jean-Maxime");
 direBonjour("Aurélien");
+
+// DOM
+
+var element = document.querySelector(".test");
+console.log(element);
