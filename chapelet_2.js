@@ -31,7 +31,7 @@ mystere.innerHTML = "";
 
 button.addEventListener("click", () => {
   ave++;
-  if (ave == 12) {
+  if (ave == dizaines.length) {
     ave = 0;
     inc++;
     if (inc == mysteres.length) {
