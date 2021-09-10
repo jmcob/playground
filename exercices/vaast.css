@@ -1,4 +1,28 @@
-.content {
+.content-0 {
   font-size: xx-large;
   font-weight: bold;
+  color: midnightblue;
+}
+.content-1 {
+  font-size: xx-large;
+  font-weight: bold;
+  color: orangered;
+}
+.content-2 {
+  font-size: xx-large;
+  font-weight: bold;
+  color: green;
+}
+.content-3 {
+  font-size: xx-large;
+  font-weight: bold;
+  color: mistyrose;
+}
+.content-4 {
+  font-size: xx-large;
+  font-weight: bold;
+  color: orange;
+}
+body {
+  background-color: silver;
 }

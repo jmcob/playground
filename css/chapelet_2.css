@@ -1,0 +1,32 @@
+.flex {
+  display: flex;
+}
+
+#button {
+  width: 35%;
+  height: 50px;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background: midnightblue;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: 500;
+  color: white;
+}
+
+#mystere {
+  margin-top: 80px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: orangered;
+  font-weight: 700;
+}
+
+#dizaine {
+  margin-top: 80px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
