@@ -9,11 +9,11 @@ const introduction = [
 
 const mysteres = [
   "Introduction du chapelet",
-  "Agonie",
-  "Flagellation",
-  "Couronnement d'épines",
-  "Chemin de Croix",
-  "Mort de Jésus",
+  "Premier mystère douloureux : l'agonie de notre Seigneur",
+  "Deuxième mystère douloureux : la flagellation de Jésus",
+  "Troisième mystère douloureux : couronnement d'épines de notre Seigneur",
+  "Quatrième mystère douloureux : le chemin de Croix",
+  "Cinquième mystère douloureux : la mort de Jésus",
 ];
 
 const dizaines = [
