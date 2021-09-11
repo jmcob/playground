@@ -9,11 +9,11 @@ const introduction = [
 
 const mysteres = [
   "Introduction du chapelet",
-  "Premier mystère douloureux : l'agonie de notre Seigneur",
-  "Deuxième mystère douloureux : la flagellation de Jésus",
-  "Troisième mystère douloureux : couronnement d'épines de notre Seigneur",
-  "Quatrième mystère douloureux : le chemin de Croix",
-  "Cinquième mystère douloureux : la mort de Jésus",
+  'Premier mystère douloureux, l\'agonie de notre Seigneur : <br><br>" Père, si tu le veux, éloigne de moi cette coupe ; cependant, que soit faite non pas ma volonté, mais la tienne." Luc 22,42',
+  `Deuxième mystère douloureux, la flagellation de Jésus : <br><br>"Alors Pilate fit saisir Jésus pour qu’il soit flagellé." Jean 19,01`,
+  `Troisième mystère douloureux, couronnement d'épines de notre Seigneur : <br><br> "Les soldats tressèrent avec des épines une couronne qu'ils lui posèrent sur la tête" Jean 19,02`,
+  `Quatrième mystère douloureux, le chemin de Croix : <br><br>"Et lui-même, portant sa croix, sortit en direction du lieu dit Le Crâne (ou Calvaire), qui se dit en hébreu Golgotha." Jean 19,17`,
+  `Cinquième mystère douloureux, la mort de Jésus : <br><br> "Après cela, sachant que tout, désormais, était achevé pour que l’Écriture s’accomplisse jusqu’au bout, Jésus dit : « J’ai soif. »" Jean 19,28`,
 ];
 
 const dizaines = [
