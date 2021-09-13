@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="randomInteger.js"></script>
+    <link rel="stylesheet" href="css/randInt.css" />
     <title>Random Integer</title>
   </head>
   <body>
-    <h1>Random Integer</h1>
-    <button onclick="oneToTen()">Deviner un chiffre !</button>
+    <h1>Random Integer between one and ten</h1>
+
+    <div>
+      <label
+        >Enter an integer between 1 and 10:
+        <input id="number" type="number" min="1" max="10" required
+      /></label>
+
+      <button id="click">Try this awesome game</button>
+    </div>
+    <p id="log"></p>
+    <script src="randomInteger2.js"></script>
   </body>
 </html>
