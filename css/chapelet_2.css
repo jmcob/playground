@@ -19,6 +19,8 @@ body {
   font-size: x-large;
   font-weight: 500;
   color: black;
+  padding: 25px;
+  margin-top: 50px;
 }
 
 #mystere {
