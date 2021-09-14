@@ -29,3 +29,7 @@ button {
   color: midnightblue;
   padding: 4px;
 }
+
+#log {
+  text-align: center;
+}

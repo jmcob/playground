@@ -1,14 +1,20 @@
 // définition d'un entier entre un et 10 random
-var valueR = Math.floor(Math.random() * 10) + 1;
+const valueR = Math.floor(Math.random() * 10) + 1;
 console.log(valueR);
 
 // log est la zone de réponse, click la zone du bouton
-var log = document.getElementById("log");
-var click = document.getElementById("click");
+const log = document.getElementById("log");
+const click = document.getElementById("click");
+const input = document.getElementById("number");
+
+input.addEventListener("keyup", () => {
+  click.click();
+});
 
 // evenement "click" puis condition switch case : si la valeur de l'utilisateur est comparable a la valeur Random, alors ...
 click.addEventListener("click", () => {
-  var valueU = document.getElementById("number").value;
+  const valueU = document.getElementById("number").value;
+
   switch (true) {
     case valueU > valueR:
       log.innerHTML =
