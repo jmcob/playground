@@ -2,7 +2,7 @@
 const valueR = Math.floor(Math.random() * 10) + 1;
 console.log(valueR);
 
-// log est la zone de réponse, click la zone du bouton
+// log est la zone de réponse, click la zone du bouton, input la zone de texte
 const log = document.getElementById("log");
 const click = document.getElementById("click");
 const input = document.getElementById("number");
