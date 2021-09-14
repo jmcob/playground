@@ -7,14 +7,23 @@ const log = document.getElementById("log");
 const click = document.getElementById("click");
 const input = document.getElementById("number");
 
-input.addEventListener("keyup", () => {
-  click.click();
+// Pour que la touche entrée trigger la fonction click
+input.addEventListener("keydown", function (event) {
+  if (event.defaultPrevented) {
+    return;
+  }
+  switch (event.key) {
+    case "Enter":
+      click.click();
+      break;
+    default:
+      return;
+  }
 });
 
 // evenement "click" puis condition switch case : si la valeur de l'utilisateur est comparable a la valeur Random, alors ...
 click.addEventListener("click", () => {
   const valueU = document.getElementById("number").value;
-
   switch (true) {
     case valueU > valueR:
       log.innerHTML =
@@ -25,7 +34,7 @@ click.addEventListener("click", () => {
         valueU + " est au dessous de la bonne valeur, try again !";
       break;
     case valueU == valueR:
-      log.innerHTML = "congrats! c'était " + valueR;
+      log.innerHTML = "congrats! c'était " + valueR + ".";
       break;
     default:
       log.innerHTML = "doesn't work";
