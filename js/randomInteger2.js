@@ -6,12 +6,10 @@ console.log(valueR);
 const log = document.getElementById("log");
 const click = document.getElementById("click");
 const input = document.getElementById("number");
+var i = 1;
 
 // Pour que la touche entrée trigger la fonction click
 input.addEventListener("keydown", function (event) {
-  if (event.defaultPrevented) {
-    return;
-  }
   switch (event.key) {
     case "Enter":
       click.click();
@@ -28,13 +26,15 @@ click.addEventListener("click", () => {
     case valueU > valueR:
       log.innerHTML =
         valueU + " est au dessus de la bonne valeur, try again, you must !";
+      i++;
       break;
     case valueU < valueR:
       log.innerHTML =
         valueU + " est au dessous de la bonne valeur, try again !";
+      i++;
       break;
     case valueU == valueR:
-      log.innerHTML = "congrats! c'était " + valueR + ".";
+      log.innerHTML = "congrats! c'était " + valueR + " en " + i + " essais.";
       break;
     default:
       log.innerHTML = "doesn't work";
