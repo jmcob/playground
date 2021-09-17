@@ -1,3 +1,5 @@
+//Faire deviner un chiffre entre 1 et 10
+
 function oneToTen() {
   function generateRandomInteger(max) {
     return Math.floor(Math.random() * max) + 1;
