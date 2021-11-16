@@ -5,16 +5,15 @@
 body {
   width: 500px;
   margin: 0 auto;
-  background: linear-gradient(to right, var(--green), #fff);
+  background: mistyrose;
   font-family: avenir;
-  display: flex;
-  flex-direction: column;
+
   transition: 700ms;
 }
 
 h1 {
   text-align: center;
-  color: rgb(56, 44, 44);
+  color: orangered;
   font-size: xx-large;
   text-shadow: 1px 1px 2px pink;
 }
@@ -23,9 +22,8 @@ h1 {
   text-align: center;
 }
 #remainingTime {
-  color: #000;
+  color: orangered;
   text-align: center;
-  text-shadow: 1px 1px 2px pink;
 }
 #button {
   margin: 20px;
