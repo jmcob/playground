@@ -6,11 +6,17 @@ body {
   width: 500px;
   margin: 0 auto;
   background: linear-gradient(to right, var(--green), #fff);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: avenir;
+  display: flex;
+  flex-direction: column;
+  transition: 700ms;
 }
+
 h1 {
   text-align: center;
-  color: #000;
+  color: rgb(56, 44, 44);
+  font-size: xx-large;
+  text-shadow: 1px 1px 2px pink;
 }
 
 #form {
@@ -19,12 +25,25 @@ h1 {
 #remainingTime {
   color: #000;
   text-align: center;
+  text-shadow: 1px 1px 2px pink;
 }
 #button {
   margin: 20px;
   border-radius: 5px;
   padding: 10px;
-  background: linear-gradient(to right, #fff, var(--green));
+  background: linear-gradient(to right, yellow, gold);
+  box-shadow: 2px 2px orange;
+  transition: all 200ms ease-in-out;
+}
+#button:hover {
+  transform: scale(1.2);
+  background: linear-gradient(to right, orange, orangered);
+  box-shadow: 5px 5px orange;
+}
+#button:active {
+  transform: scale(1.25);
+  background: linear-gradient(to right, red, purple);
+  box-shadow: 10px 10px pink;
 }
 #itemQuantity {
   padding: 10px;
