@@ -1,10 +1,11 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  background-color: midnightblue;
+  font-size: larger;
+  background: linear-gradient(to right, midnightblue, lightblue);
 }
 a {
-  color: yellow;
+  color: gold;
   transition: 100ms;
 }
 a:visited {
