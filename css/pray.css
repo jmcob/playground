@@ -1,0 +1,32 @@
+:root {
+  --green: #62e083;
+}
+
+body {
+  width: 500px;
+  margin: 0 auto;
+  background: linear-gradient(to right, var(--green), #fff);
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+  text-align: center;
+  color: #000;
+}
+
+#form {
+  text-align: center;
+}
+#remainingTime {
+  color: #000;
+  text-align: center;
+}
+#button {
+  margin: 20px;
+  border-radius: 5px;
+  padding: 10px;
+  background: linear-gradient(to right, #fff, var(--green));
+}
+#itemQuantity {
+  padding: 10px;
+  border-radius: 5px;
+}

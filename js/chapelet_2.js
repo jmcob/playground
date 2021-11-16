@@ -61,5 +61,3 @@ button.addEventListener("click", () => {
   }
   ave++;
 });
-
-/* Dans le cas où tu souhaiterais que ce soit le texte du bouton qui change, il faudrait changer lignes 10 et 17 les text.innerHTML par button.innerHTML */
