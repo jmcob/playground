@@ -20,4 +20,5 @@ function alertFunc() {
   document.body.style.background = "mistyrose";
   remainingTime.innerHTML =
     "Terminé! Vous avez prié " + time.value + " minute(s)";
+  new Audio("hey.ogg").play();
 }
