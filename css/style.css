@@ -3,15 +3,23 @@ body {
   color: white;
   background-color: midnightblue;
 }
-body a {
+a {
   color: yellow;
+  transition: 100ms;
 }
-body a:visited {
+a:visited {
   color: aquamarine;
 }
-
+a:hover {
+  color: orangered;
+  transform: scale(1.3);
+}
+a:active {
+  color: purple;
+}
 .menu {
   font-size: larger;
+  text-align: center;
 }
 
 h1 {
