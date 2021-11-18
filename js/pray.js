@@ -53,8 +53,3 @@ const requestWakeLock = async () => {
 
 // Request a screen wake lock…
 await requestWakeLock();
-// …and release it again after 5s.
-window.setTimeout(() => {
-  wakeLock.release();
-  wakeLock = null;
-}, 5000);
