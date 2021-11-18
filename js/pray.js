@@ -36,7 +36,7 @@ try {
 }
 
 // The wake lock sentinel.
-const wakeLock = null;
+var wakeLock = null;
 
 // Function that attempts to request a screen wake lock.
 const requestWakeLock = async () => {
