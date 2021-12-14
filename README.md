@@ -1,3 +1,3 @@
 # playground : a learning repository
 
-JS and VueJS
+JS and VueJS3
