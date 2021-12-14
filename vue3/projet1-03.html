@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                />
+                <title>Projet 1-03</title>
+                <script src="https://unpkg.com/vue@next"></script>
+        </head>
+        <body>
+                <div id="app">
+                        <h2>{{titre.split('').reverse().join('')}}</h2>
+                        <p>{{sousTitre.toUpperCase()}}</p>
+                </div>
+                <script>
+                        app = Vue.createApp({
+                                data() {
+                                        return {
+                                                titre: "Ma première application Vue 3",
+                                                sousTitre: "... en trois minutes chrono !",
+                                        };
+                                },
+                        });
+                        app.mount("#app");
+                </script>
+        </body>
+</html>
