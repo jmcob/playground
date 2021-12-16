@@ -11,9 +11,25 @@
                 <script src="https://unpkg.com/vue@next"></script>
         </head>
         <body>
-                <div id="app"></div>
+                <div id="app">
+                        <p v-text="texteBrut"></p>
+                        <p v-html="texteHTML"></p>
+                </div>
                 <script>
-                        app = Vue.createApp({});
+                        app = Vue.createApp({
+                                data() {
+                                        return {
+                                                texteBrut: "Un simple texte",
+                                                texteHTML: `<font color="red">
+                                                                <u>
+                                                                        Un texte
+                                                                        rouge et
+                                                                        souligné
+                                                                </u></font>
+                                                        `,
+                                        };
+                                },
+                        });
                         app.mount("#app");
                 </script>
         </body>

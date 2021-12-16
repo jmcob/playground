@@ -1,46 +1,46 @@
 :root {
-  --green: #62e083;
+        --green: #62e083;
 }
 
 body {
-  background: mistyrose;
-  font-family: avenir;
-  transition: 700ms;
+        background: mistyrose;
+        font-family: avenir;
+        transition: 700ms;
 }
 
 h1 {
-  text-align: center;
-  color: orangered;
-  font-size: xx-large;
-  text-shadow: 1px 1px 2px pink;
+        text-align: center;
+        color: orangered;
+        font-size: xx-large;
+        text-shadow: 1px 1px 2px pink;
 }
 
 #form {
-  text-align: center;
+        text-align: center;
 }
 #remainingTime {
-  color: orangered;
-  text-align: center;
+        color: orangered;
+        text-align: center;
 }
 #button {
-  margin: 20px;
-  border-radius: 5px;
-  padding: 10px;
-  background: linear-gradient(to right, yellow, gold);
-  box-shadow: 2px 2px orange;
-  transition: all 200ms ease-in-out;
+        margin: 20px;
+        border-radius: 5px;
+        padding: 10px;
+        background: linear-gradient(to right, yellow, gold);
+        box-shadow: 2px 2px orange;
+        transition: all 200ms ease-in-out;
 }
 #button:hover {
-  transform: scale(1.2);
-  background: linear-gradient(to right, orange, orangered);
-  box-shadow: 5px 5px orange;
+        transform: scale(1.2);
+        background: linear-gradient(to right, orange, orangered);
+        box-shadow: 5px 5px orange;
 }
 #button:active {
-  transform: scale(1.25);
-  background: linear-gradient(to right, red, purple);
-  box-shadow: 10px 10px pink;
+        transform: scale(1.25);
+        background: linear-gradient(to right, red, purple);
+        box-shadow: 10px 10px pink;
 }
 #itemQuantity {
-  padding: 10px;
-  border-radius: 5px;
+        padding: 10px;
+        border-radius: 5px;
 }
