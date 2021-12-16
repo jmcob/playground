@@ -18,6 +18,10 @@ h1 {
 #form {
         text-align: center;
 }
+#chosenTime {
+        color: orangered;
+        text-align: center;
+}
 #remainingTime {
         color: orangered;
         text-align: center;

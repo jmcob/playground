@@ -7,35 +7,91 @@
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                 />
-                <link
-                        rel="stylesheet"
-                        href="
-    ../css/pray.css"
-                />
+                <link rel="stylesheet" href="../css/pray.css" />
                 <title>Prayer timer</title>
+                <script src="https://unpkg.com/vue@next"></script>
         </head>
         <body>
-                <h1>Prayer timer</h1>
-                <br />
-                <div id="form">
-                        <input
-                                type="number"
-                                id="itemQuantity"
-                                name="itemQuantity"
-                                min="1"
-                                max="100"
-                                value="10"
-                        />
-                        <span id="minutes">minutes</span>
+                <div id="app">
+                        <h1>Prayer timer</h1>
                         <br />
-                        <button id="button">
-                                Combien de minutes voulez vous prier ?
-                        </button>
+                        <div id="form">
+                                <input
+                                        type="number"
+                                        id="itemQuantity"
+                                        name="itemQuantity"
+                                        min="1"
+                                        max="100"
+                                        value="10"
+                                />
+                                <span id="minutes">minutes</span>
+                                <br />
+                                <button id="button">
+                                        Combien de minutes voulez vous prier ?
+                                </button>
+                        </div>
+
+                        <br />
+                        <p id="chosenTime"></p>
+                        <p id="remainingTime">
+                                Vous avez déjà prié {{minutes}} minute(s) et
+                                {{seconds}} seconde(s)
+                        </p>
                 </div>
+                <script>
+                        app = Vue.createApp({
+                                data() {
+                                        return {
+                                                minutes: "",
+                                                seconds: "",
+                                        };
+                                },
+                        });
+                        let vm = app.mount("#app");
+                        const time = document.getElementById("itemQuantity");
+                        const remainingTime =
+                                document.getElementById("remainingTime");
+                        const chosenTime =
+                                document.getElementById("chosenTime");
+                        const button = document.getElementById("button");
+                        const form = document.getElementById("form");
+                        button.addEventListener("click", () => {
+                                let minuteTimer = time.value * 60000; //minuteTimer = time in ms
+                                let ms = 0;
+                                let seconds = 0;
+                                let minutes = 0;
+                                setInterval(() => {
+                                        ms += 1000;
+                                        seconds = ms / 1000;
+                                        if (seconds == 60) {
+                                                minutes++;
+                                                seconds = 0;
+                                                ms -= 60000;
+                                        }
+                                        vm.minutes = minutes;
+                                        vm.seconds = seconds;
+                                }, 1000);
+                                // message :
+                                chosenTime.innerHTML =
+                                        "Vous avez choisi de prier " +
+                                        time.value +
+                                        " minute(s).";
 
-                <br />
-
-                <p id="remainingTime"></p>
-                <script src="../js/pray.js"></script>
+                                // aesthetics and final function
+                                setTimeout(alertFunc, minuteTimer);
+                                document.body.style.background = "midnightblue";
+                                document.body.style.color = "orangered";
+                                form.style.display = "none";
+                                function alertFunc() {
+                                        document.body.style.background =
+                                                "green";
+                                        remainingTime.innerHTML =
+                                                "Terminé! Vous avez prié " +
+                                                time.value +
+                                                " minute(s)";
+                                        new Audio("hey.ogg").play();
+                                }
+                        });
+                </script>
         </body>
 </html>
