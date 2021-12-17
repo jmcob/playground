@@ -33,9 +33,9 @@
 
                         <br />
                         <p id="chosenTime"></p>
-                        <p id="remainingTime">
+                        <p id="prayedTime">
                                 Vous avez déjà prié {{minutes}} minute(s) et
-                                {{seconds}} seconde(s)
+                                {{seconds}} seconde(s). C'est bien !
                         </p>
                 </div>
                 <script>
@@ -48,14 +48,25 @@
                                 },
                         });
                         let vm = app.mount("#app");
+                        if ("wakeLock" in navigator) {
+                                document.body.background = "green";
+                                // Screen Wake Lock API supported 🎉
+                        }
+                        //consts :
                         const time = document.getElementById("itemQuantity");
-                        const remainingTime =
-                                document.getElementById("remainingTime");
+                        const prayedTime =
+                                document.getElementById("prayedTime");
+
+                        // "Vous avez prié"
+                        prayedTime.style.display = "none";
                         const chosenTime =
                                 document.getElementById("chosenTime");
                         const button = document.getElementById("button");
                         const form = document.getElementById("form");
+
+                        // on btn click :
                         button.addEventListener("click", () => {
+                                prayedTime.style.display = "inherit";
                                 let minuteTimer = time.value * 60000; //minuteTimer = time in ms
                                 let ms = 0;
                                 let seconds = 0;
