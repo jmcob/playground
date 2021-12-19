@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                />
+                <title>Projet 1-13</title>
+                <script src="https://unpkg.com/vue@next"></script>
+        </head>
+        <body>
+                <div id="app">
+                        <p>Vous avez choisi {{capital}}</p>
+                        <br />
+                        <select
+                                name="capitals"
+                                id="capital-select"
+                                v-model="capital"
+                        >
+                                <option value="">
+                                        --Please choose an option--
+                                </option>
+                                <option value="Paris">Paris</option>
+                                <option value="London">London</option>
+                                <option value="Madrid">Madrid</option>
+                        </select>
+                </div>
+                <script>
+                        app = Vue.createApp({
+                                data() {
+                                        return {
+                                                capital: "",
+                                        };
+                                },
+                        });
+                        app.mount("#app");
+                </script>
+        </body>
+</html>

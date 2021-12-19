@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+        <head>
+                <meta charset="UTF-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                        name="viewport"
+                        content="width=device-width, initial-scale=1.0"
+                />
+                <title>Projet 1-16</title>
+                <script src="https://unpkg.com/vue@next"></script>
+        </head>
+        <body>
+                <div id="app">
+                        <p>Check the boxes of the languages you know :</p>
+                        <br />
+                        <div>
+                                <input
+                                        type="radio"
+                                        value="HTML"
+                                        v-model="code"
+                                />
+                                <label for="code">HTML</label>
+                        </div>
+
+                        <div>
+                                <input
+                                        type="radio"
+                                        value="CSS"
+                                        v-model="code"
+                                />
+                                <label for="code">CSS</label>
+                        </div>
+                        <div>
+                                <input
+                                        type="radio"
+                                        value="JavaScript"
+                                        v-model="code"
+                                />
+                                <label for="code">JS</label>
+                        </div>
+                        <br />
+                        <p>radio button chosen : {{code}}</p>
+                </div>
+                <script>
+                        app = Vue.createApp({
+                                data() {
+                                        return {
+                                                code: "",
+                                        };
+                                },
+                        });
+                        app.mount("#app");
+                </script>
+        </body>
+</html>
