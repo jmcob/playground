@@ -7,29 +7,26 @@
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                 />
-                <title>Projet 1-22</title>
+                <title>Prjet 1-23</title>
                 <script src="https://unpkg.com/vue@next"></script>
         </head>
         <body>
                 <div id="app">
-                        <div @keydown="actionParent">
-                                <input type="text" @keydown="action($event)" />
-                        </div>
+                        <p>
+                                <a
+                                        href="http://www.google.com"
+                                        @click="action($event)"
+                                        >Google</a
+                                >
+                        </p>
+                        <br />
+                        <p><a href="http://www.bing.com">Bing</a></p>
                 </div>
                 <script>
                         app = Vue.createApp({
                                 methods: {
                                         action(ev) {
-                                                console.log(
-                                                        "évenement traité dans le input"
-                                                );
                                                 ev.preventDefault();
-                                                ev.stopPropagation();
-                                        },
-                                        actionParent() {
-                                                console.log(
-                                                        "evenement traité dans le parent"
-                                                );
                                         },
                                 },
                         });

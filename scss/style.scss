@@ -1,17 +1,21 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  background-color: midnightblue;
-  & a {
-    color: aliceblue;
-    &:visited {
-      color: aquamarine;
-    }
-  }
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+        background-color: midnightblue;
+
+        & a {
+                color: aliceblue;
+                &:visited {
+                        color: aquamarine;
+                }
+        }
+}
+li {
+        padding: 15px;
 }
 .menu {
-  font-size: larger;
+        font-size: x-large;
 }
 h1 {
-  font-size: xx-large;
+        font-size: xx-large;
 }

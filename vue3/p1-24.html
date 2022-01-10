@@ -7,14 +7,21 @@
                         name="viewport"
                         content="width=device-width, initial-scale=1.0"
                 />
-                <title>Projet 1-22</title>
+                <title>Projet 1-24</title>
                 <script src="https://unpkg.com/vue@next"></script>
         </head>
         <body>
                 <div id="app">
                         <div @keydown="actionParent">
-                                <input type="text" @keydown="action($event)" />
+                                <input
+                                        type="text"
+                                        @keydown.prevent.stop="action($event)"
+                                />
                         </div>
+                        <button @click.once="action">Cliquez ici</button>
+                        <input type="text" @keyup.enter="action" />
+                        // enter, tab, delete, esc, space, up, down, right,
+                        left, page up, page down
                 </div>
                 <script>
                         app = Vue.createApp({
@@ -23,8 +30,8 @@
                                                 console.log(
                                                         "évenement traité dans le input"
                                                 );
-                                                ev.preventDefault();
-                                                ev.stopPropagation();
+                                                //ev.preventDefault();
+                                                //ev.stopPropagation();
                                         },
                                         actionParent() {
                                                 console.log(
