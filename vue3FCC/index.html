@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title>Vue 3 Basics</title>
+                <style>
+                        .box {
+                                background-color: orangered;
+                                height: 275px;
+                                width: 275px;
+                        }
+                </style>
+        </head>
+        <body>
+                <div id="app">
+                        {{ greeting }}
+                        <input @keyup.enter="greet" v-model="greeting" />
+
+                        <hr />
+
+                        <button @click="toggleBox">Toggle Box</button>
+                        <test-box v-if="isVisible" />
+                </div>
+
+                <script src="https://unpkg.com/vue@next"></script>
+                <script>
+                        let app = Vue.createApp({
+                                data: function () {
+                                        return {
+                                                isVisible: false,
+                                                greeting: "Hello Vue 3!",
+                                        };
+                                },
+                                methods: {
+                                        toggleBox: function () {
+                                                this.isVisible =
+                                                        !this.isVisible;
+                                        },
+                                        greet() {
+                                                console.log(this.greeting);
+                                        },
+                                },
+                                updated() {
+                                        console.log("updated");
+                                },
+                        });
+                        app.component("test-box", {
+                                template: `
+                            <div class="box"></div>
+                        `,
+                                created() {
+                                        console.log("created");
+                                },
+                                mounted() {
+                                        console.log("mounted");
+                                },
+                                unmounted() {
+                                        console.log("unmounted");
+                                },
+                        });
+                        app.mount("#app");
+                </script>
+        </body>
+</html>
