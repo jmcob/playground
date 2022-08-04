@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculatrice</title>
+  </head>
+  <body>
+    <h1>Calculatrice</h1>
+    <h2>Entrée</h2>
+    <form>
+      <input type="text" id="text" value="5*9*6" />
+      <input type="submit" onclick="times()" />
+    </form>
+    <h2>Résultats</h2>
+    <div id="resultX"></div>
+    <div id="resultB"></div>
+    <script>
+      function add(a, b) {
+        let result = 0;
+        let plus = b.indexOf("+");
+        if (plus == -1) {
+          result = parseInt(b);
+        } else {
+          result = add(b.substring(0, plus + 1), b.substring(plus + 1));
+        }
+        let c = parseInt(a) + result;
+        return c;
+      }
+
+      let addition = "3+5+8";
+      console.log(parseInt(addition));
+      let plus = addition.indexOf("+");
+      console.log(plus);
+
+      let result = add(
+        addition.substring(0, plus + 1),
+        addition.substring(plus + 1)
+      );
+      console.log(result);
+
+      // multiplication
+      function times(e) {
+        event.preventDefault();
+        const x = document.getElementById("text").value;
+        console.log(x);
+        let resultX = 1;
+        let resultB = 1;
+        let xSplit = x.split("*");
+        for (let i = 0; i < xSplit.length; i++) {
+          resultX = resultX * parseInt(xSplit[i]);
+        }
+        console.log("resultX", resultX);
+        for (number of xSplit) {
+          resultB = parseInt(number) * resultB;
+        }
+        console.log("resultB", resultB);
+
+        const calcX = document.getElementById("resultX");
+        const calcB = document.getElementById("resultB");
+        calcX.innerText = "Le resultat de la premiere methode est : " + resultX;
+        calcB.innerText = "Le resultat de la deuxième methode est : " + resultB;
+      }
+    </script>
+  </body>
+</html>
